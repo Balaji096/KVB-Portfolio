@@ -4,6 +4,12 @@ import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { useState, useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
+
+// Dynamically import the Typewriter component to ensure it's only rendered client-side
+const TypewriterClientSide = dynamic(() => import("react-simple-typewriter"), {
+  ssr: false, // This ensures the component is not rendered server-side
+});
 
 function AboutSection() {
   const [showTypewriter, setShowTypewriter] = useState(true);
@@ -50,7 +56,7 @@ function AboutSection() {
           </p>
           <p className="text-gray-200 text-sm lg:text-lg leading-relaxed">
             {showTypewriter ? (
-              <Typewriter
+              <TypewriterClientSide
                 words={[
                   "My name is K.Venkata Balaji. I am a passionate Computer Science graduate skilled in Python, Web Development, and Project Development. I enjoy building smart, user-friendly projects that solve real-world problems and enhance user experiences. From developing intelligent voice bots to creating responsive, dynamic websites, I love turning ideas into impactful digital solutions. My work combines clean design, efficient code, and a focus on usability. I'm always exploring new technologies and pushing myself to learn and grow. Driven by curiosity and innovation, I'm excited to contribute to projects that make a difference.",
                 ]}
