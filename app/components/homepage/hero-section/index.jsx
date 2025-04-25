@@ -126,7 +126,7 @@ function HeroSection() {
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div><span className="text-pink-500">const</span> <span className="text-white">coder</span> <span className="text-pink-500">=</span> <span className="text-gray-400">&#123;</span></div>
-              <div className="ml-4"><span className="text-white">name:</span> <span className="text-amber-300">'{personalData.name}'</span><span className="text-gray-400">,</span></div>
+              <div className="ml-4"><span className="text-white">name:</span> <span className="text-amber-300">&apos;{personalData.name}&apos;</span><span className="text-gray-400">,</span></div>
               <div className="ml-4">
                 <span className="text-white">skills:</span> <span className="text-gray-400">[</span>
                 <span className="text-amber-300">&apos;HTML&apos;, &apos;CSS&apos;, &apos;Javascript&apos;, &apos;ReactJS&apos;, &apos;Python&apos;, &apos;Django&apos;, &apos;MySQL&apos;, &apos;Git&apos;</span>
