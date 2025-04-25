@@ -11,6 +11,12 @@ const Typewriter = dynamic(
   { ssr: false }
 );
 
+// Dynamically import only the Typewriter component to avoid SSR issues
+const Typewriter = dynamic(
+  () => import("react-simple-typewriter").then(mod => mod.Typewriter),
+  { ssr: false }
+);
+
 function AboutSection() {
   const aboutRef = useRef(null);
   const [showTypewriter, setShowTypewriter] = useState(true);
@@ -81,5 +87,3 @@ function AboutSection() {
     </div>
   );
 }
-
-export default AboutSection;
