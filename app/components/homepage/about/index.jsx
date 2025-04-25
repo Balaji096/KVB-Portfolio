@@ -55,7 +55,7 @@ function AboutSection() {
             {showTypewriter && (
               <Typewriter
                 words={[
-                  "My name is K.Venkata Balaji. I am a passionate Computer Science graduate skilled in Python, Web Development, and Project Development. I enjoy building smart, user-friendly projects that solve real-world problems and enhance user experiences. From developing intelligent voice bots to creating responsive, dynamic websites, I love turning ideas into impactful digital solutions. My work combines clean design, efficient code, and a focus on usability. I&apos;m always exploring new technologies and pushing myself to learn and grow. Driven by curiosity and innovation, I&apos;m excited to contribute to projects that make a difference.",
+                  "My name is K.Venkata Balaji. I&apos;m a passionate Computer Science graduate skilled in Python, Web Development, and Project Development. I enjoy building smart, user-friendly projects that solve real-world problems and enhance user experiences. From developing intelligent voice bots to creating responsive, dynamic websites, I love turning ideas into impactful digital solutions. My work combines clean design, efficient code, and a focus on usability. I&apos;m always exploring new technologies and pushing myself to learn and grow. Driven by curiosity and innovation, I&apos;m excited to contribute to projects that make a difference.",
                 ]}
                 loop={1}
                 typeSpeed={20}
