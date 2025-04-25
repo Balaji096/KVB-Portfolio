@@ -1,3 +1,6 @@
+// At the top of your page.js file
+"use client"; // This marks the file as a client-side component
+
 import { personalData } from "@/utils/data/personal-data";
 import AboutSection from "./components/homepage/about";
 import Blog from "./components/homepage/blog";
@@ -54,7 +57,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Education />
-     {/* <Blog blogs={blogs} />  Uncomment this once data is fetched */}
+      {/*  <Blog blogs={blogs} />Uncomment this once data is fetched */}
       <ContactSection />
     </div>
   );
