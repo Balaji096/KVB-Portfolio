@@ -6,13 +6,6 @@ import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamically import only the Typewriter component to avoid SSR issues
-
-const Typewriter = dynamic(
-  () => import("react-simple-typewriter").then(mod => mod.Typewriter),
-  { ssr: false }
-);
-
-// Dynamically import only the Typewriter component to avoid SSR issues
 const Typewriter = dynamic(
   () => import("react-simple-typewriter").then(mod => mod.Typewriter),
   { ssr: false }
