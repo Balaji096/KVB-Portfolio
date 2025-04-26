@@ -1,15 +1,13 @@
-"use client"; 
+"use client";
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
-// Dynamically import only the Typewriter component to avoid SSR issues
-const Typewriter = dynamic(
-  () => import("react-simple-typewriter").then(mod => mod.Typewriter),
-  { ssr: false }
-);
+const Typewriter = dynamic(() => import("react-simple-typewriter"), {
+  ssr: false,
+});
 
 function AboutSection() {
   const aboutRef = useRef(null);
@@ -26,13 +24,15 @@ function AboutSection() {
       { threshold: 0.5 }
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    const currentRef = aboutRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -53,7 +53,7 @@ function AboutSection() {
           </p>
           <p className="text-gray-200 text-sm lg:text-lg leading-relaxed">
             {showTypewriter && (
-              <Typewriter
+              <Typewriter.Typewriter
                 words={[
                   "My name is K.Venkata Balaji. I&apos;m a passionate Computer Science graduate skilled in Python, Web Development, and Project Development. I enjoy building smart, user-friendly projects that solve real-world problems and enhance user experiences. From developing intelligent voice bots to creating responsive, dynamic websites, I love turning ideas into impactful digital solutions. My work combines clean design, efficient code, and a focus on usability. I&apos;m always exploring new technologies and pushing myself to learn and grow. Driven by curiosity and innovation, I&apos;m excited to contribute to projects that make a difference.",
                 ]}
@@ -81,3 +81,5 @@ function AboutSection() {
     </div>
   );
 }
+
+export default AboutSection;
