@@ -1,6 +1,6 @@
-const path = require('path')
- 
-module.exports = {
+const path = require('path');
+
+const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
@@ -23,4 +23,7 @@ module.exports = {
       },
     ],
   },
-}
+  allowedDevOrigins: ['http://192.168.249.82:3000'],
+};
+
+module.exports = nextConfig;
